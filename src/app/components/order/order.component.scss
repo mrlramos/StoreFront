@@ -1,0 +1,21 @@
+.container {
+    text-align: center;
+}
+
+.form-group {
+    display: inline-block;
+}
+
+.form-control,
+.btn {
+    margin-bottom: 1%;
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+}
+
+.btn-primary,
+.btn-success {
+    float: none;
+    display: inline-block;
+}

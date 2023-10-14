@@ -2,8 +2,8 @@
     <h2>Cadastrar Mensagem</h2>
     <form (submit)="onSubmit()">
         <div class="form-group">
-            <label for="customer">Preencha o campo com a mensagem que seu cliente visualizará no WhatsApp</label>
-            <textarea class="form-control" id="message" rows="3" [(ngModel)]="message" name="message"
+            <textarea class="form-control" placeholder="Preencha esse campo com a mensagem que seu cliente visualizará no WhatsApp." 
+                id="message" rows="3" [(ngModel)]="message" name="message"
                 required></textarea>
             <button routerLink="/home" type="button" class="btn btn-secondary mr-2">Voltar</button>
             <button type="submit" class="btn btn-success">Salvar</button>

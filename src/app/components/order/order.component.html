@@ -1,1 +1,25 @@
-<p>order works!</p>
+<div class="container mt-5">
+    <h2>Cadastrar Pedido</h2>
+    <form (submit)="onSubmit()">
+        <div class="form-group">
+            <label for="item">Item</label>
+            <input type="text" class="form-control mb-2" id="item" [(ngModel)]="newItem.name" name="item" required>
+            
+            <label for="price">Preço</label>
+            <input type="number" class="form-control mb-2" id="price" [(ngModel)]="newItem.price" name="price" required>
+
+            <label for="quantity">Quantidade</label>
+            <input type="number" class="form-control mb-2" id="quantity" [(ngModel)]="newItem.quantity" name="quantity" required>
+            
+            <button type="button" class="btn btn-primary mr-2" (click)="addItem()">Adicionar</button>
+            <button type="submit" class="btn btn-success">Finalizar Pedido</button>
+        </div>
+    </form>
+
+    <h3>Itens do Pedido</h3>
+    <ul>
+        <li *ngFor="let item of order.items">
+            {{ item.name }} - {{ item.price }} - {{ item.quantity }}
+        </li>
+    </ul>
+</div>
