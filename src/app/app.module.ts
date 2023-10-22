@@ -13,6 +13,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CustomerComponent } from './components/customer/customer.component';
 import { OrderComponent } from './components/order/order.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { OrderComponent } from './components/order/order.component';
     HeaderComponent,
     FooterComponent,
     CustomerComponent,
-    OrderComponent    
+    OrderComponent,
+    ForgotPasswordComponent    
   ],
   imports: [
     BrowserModule,
