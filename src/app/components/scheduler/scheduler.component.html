@@ -1,0 +1,40 @@
+<!-- scheduler.component.html -->
+<form [formGroup]="yourForm" (ngSubmit)="onSubmit()">
+    <div class="form-group row">
+        <div class="col-md-6 mx-auto">
+            <label for="cliente">Cliente</label>
+            <select formControlName="cliente" class="form-control mb-2" id="cliente">
+                <option *ngFor="let option of options" [value]="option.value">{{ option.label }}</option>
+            </select>
+
+            <label for="mensagem">Mensagem</label>
+            <select formControlName="mensagem" class="form-control mb-2" id="mensagem">
+                <option *ngFor="let option of options2" [value]="option.value">{{ option.label }}</option>
+            </select>
+
+            <label for="pedido">Pedido</label>
+            <select formControlName="pedido" class="form-control mb-2" id="pedido">
+                <option *ngFor="let option of options3" [value]="option.value">{{ option.label }}</option>
+            </select>
+
+            <!-- <button type="submit" class="btn btn-success w-100 mt-2">Agendar!</button>  w-100 para largura total -->
+        </div>
+    </div>
+</form>
+
+<div class="container-fluid mt-5">
+    <h2 class="text-center">Pré-visualização da mensagem</h2>
+    <form (submit)="onSubmit()">
+        <div class="form-group row">
+            <div class="col-md-6 mx-auto">
+                <textarea class="form-control mb-2" placeholder="" 
+                    id="message" rows="3" name="message"
+                    [(ngModel)]="previewMessage" required readonly></textarea>
+                <div class="d-flex justify-content-between">
+                    <button routerLink="/home" type="button" class="btn btn-secondary">Voltar</button>
+                    <button type="submit" class="btn btn-success">Agendar!</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

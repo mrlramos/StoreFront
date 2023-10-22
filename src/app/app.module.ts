@@ -14,6 +14,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CustomerComponent } from './components/customer/customer.component';
 import { OrderComponent } from './components/order/order.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { SchedulerComponent } from './components/scheduler/scheduler.component';
+
+import { ReactiveFormsModule } from '@angular/forms';  // Importe ReactiveFormsModule e FormsModule
 
 
 @NgModule({
@@ -26,11 +29,13 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
     FooterComponent,
     CustomerComponent,
     OrderComponent,
-    ForgotPasswordComponent    
+    ForgotPasswordComponent,
+    SchedulerComponent    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,  // Adicione ReactiveFormsModule
     FormsModule
   ],
   providers: [],
