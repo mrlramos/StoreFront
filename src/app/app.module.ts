@@ -17,6 +17,7 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { SchedulerComponent } from './components/scheduler/scheduler.component';
 
 import { ReactiveFormsModule } from '@angular/forms';  // Importe ReactiveFormsModule e FormsModule
+import { HttpClientModule } from '@angular/common/http'; 
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { ReactiveFormsModule } from '@angular/forms';  // Importe ReactiveFormsM
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,  // Adicione ReactiveFormsModule
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
